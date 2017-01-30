@@ -1,9 +1,13 @@
-{{outlet}}
 
-<h2>Livres</h2>
+<div>
+   <h3> Tous les livres</h3>
 
-<ul>
-  {{#each model as |book|}}
-    <li>{{book}}</li>
-  {{/each}}
-</ul>
+      {{#each model.items as |item|}}
+
+        <p>{{item.volumeInfo.title}}</p>
+        <p>{{item.volumeInfo.publishedDate}}</p>
+
+
+   {{/each}}
+
+</div>
